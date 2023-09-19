@@ -63,6 +63,7 @@ export const create = async (req, res) => {
       hot_sale,
       isNew,
       categoryId,
+      quantity,
     } = req.body;
     // Tạo sản phẩm mới với thông tin đã được format
     const product = await Product.create({
@@ -79,6 +80,7 @@ export const create = async (req, res) => {
       isNew,
       hot_sale,
       categoryId,
+      quantity,
     });
 
     if (!product) {
